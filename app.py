@@ -8,7 +8,7 @@ app.secret_key = "supersecretkey"  # change this to anything random and private
 # ------------------- SPOTIFY CONFIG -------------------
 SPOTIFY_CLIENT_ID = "b0108671c22f41d49d28f9d892b2ba35"
 SPOTIFY_CLIENT_SECRET = "f61a5d8ca25b45138f32b119755bd8d7"
-SPOTIFY_REDIRECT_URI = "https://music-playlist-maker.onrender.com"
+SPOTIFY_REDIRECT_URI = "https://music-playlist-maker.onrender.com/callback"
 SCOPE = "playlist-modify-public playlist-modify-private user-read-private"
 
 # ------------------- FRONTEND (SURVEY PAGE) -------------------
@@ -239,4 +239,5 @@ def create_custom_playlist(sp, user_id, mood, artist, trending, playlist_length)
 # ------------------- RUN APP -------------------
 if __name__ == "__main__":
     app.run(debug=True)
+
 
