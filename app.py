@@ -107,7 +107,8 @@ def login():
         client_id=SPOTIFY_CLIENT_ID,
         client_secret=SPOTIFY_CLIENT_SECRET,
         redirect_uri=SPOTIFY_REDIRECT_URI,
-        scope=SCOPE
+        scope=SCOPE,
+        cache_path=None
     )
 
     auth_url = sp_oauth.get_authorize_url()
@@ -120,7 +121,8 @@ def callback():
         client_id=SPOTIFY_CLIENT_ID,
         client_secret=SPOTIFY_CLIENT_SECRET,
         redirect_uri=SPOTIFY_REDIRECT_URI,
-        scope=SCOPE
+        scope=SCOPE,
+        cache_path=None
     )
 
     code = request.args.get('code')
@@ -239,6 +241,7 @@ def create_custom_playlist(sp, user_id, mood, artist, trending, playlist_length)
 # ------------------- RUN APP -------------------
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
